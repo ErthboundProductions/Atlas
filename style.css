@@ -1,44 +1,142 @@
-:root{
+:root {
     font-size: 8px;
     --primary: #fd6;
+    --primary20: #fd62;
     --secondary: #45c;
     --black: #000;
+    --black80: #000c;
+    --black20: #0002;
     --white: #fff;
+    --white90: #fffe;
     --special01: #0fc;
     --special02: #f05;
     font-family: "avenir next", sans-serif;
 }
 
-*{
+* {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-#wrapper{
-    max-width: 84rem;
+
+body{
+    background-color: var(--secondary);
+}
+#wrapper {
+    max-width: 60rem;
     margin: auto;
 }
 
-header {
-    background-color: var(--secondary);
-    text-align: center;
-    padding:2rem;
-}
-header img{
-    width:24rem;
-    margin:0 0 1rem 0;
+#headerWindow {
+    height: 25rem;
 }
 
-h2{
-    font-size: 6rem;
+header {
+    position: fixed;
+    background-color: var(--secondary);
+    text-align: center;
+    padding: 2rem;
+    color: var(--white90);
+    z-index: -1;
+    width: 100%;
+    max-width: 60rem;
+    height: 100vh;
+}
+
+main {
+    background-color: var(--white);
+    top:25rem;
+}
+
+header img {
+    width: 24rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 4rem;
     line-height: 1;
 }
 
-h4{
+h4 {
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 1rem;
     font-size: 2rem;
-    line-height: 1;
+    line-height: 1.2;
+}
+
+main {
+    padding: 2rem;
+    margin: 0 1rem;
+    box-shadow: 0px 0px 1rem var(--black20);
+    border-radius: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.entry h3 {
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.entry p {
+    color: var(--white90);
+    font-size: 1.25rem;
+}
+
+.highlight h3 {
+    color: var(--special01);
+    font-size: 1.5rem;
+}
+
+.highlight p {
+    color: var(--white90);
+    font-size: 1.25rem;
+}
+
+figure {
+    display: flex;
+    flex-flow: row;
+    background-color: var(--black80);
+    margin: 1rem 0;
+    border-radius: 1rem;;
+    overflow: hidden;
+    
+}
+
+figure img {
+    width: 8rem;
+    padding: 2rem;
+    background-color: var(--primary);
+    margin-right: 1rem;
+}
+
+.highlight figure img {
+    background-color: var(--special01);
+}
+
+figcaption {
+    padding: .5rem .5rem .5rem 1rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+#footerWindow {
+    height: 7rem;
+}
+footer {
+    padding: 2rem;
+    text-align: center;
+    color: var(--white90);
+    font-size: 1.5rem;
+    position: fixed;
+    width: 100%;
+    max-width: 60rem;
+    bottom: 0;
+    z-index: -1;
 }
